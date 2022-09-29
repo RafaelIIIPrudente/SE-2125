@@ -4,17 +4,17 @@ const postLoad = () => {
   let logInButton = document.getElementById('loginButton')
 
   logInButton.onclick = () => {
-    let usernameInput = document.getElementById('username').value;
-    let passwordInput = document.getElementById('password').value;
+    let emailInput = document.getElementById('inputEmail').value;
+    let passwordInput = document.getElementById('inputPassword').value;
 
     //(SAFER)
     //if username and password is empty
-    if (!usernameInput && !passwordInput) {
-      alert('Please enter username and password');
+    if (!emailInput && !passwordInput) {
+      alert('Please enter email and password');
       return;
       //if username is blank, throw an error
-    } else if (!usernameInput) {
-      alert('please enter username');
+    } else if (!emailInput) {
+      alert('please enter email');
       return;
       //if password is blank, throw an error
     } else if (!passwordInput) {
@@ -23,12 +23,12 @@ const postLoad = () => {
     }
 
     //if both username and password have less than 3 characters
-    if (usernameInput.length < 3 && passwordInput.length < 3) {
-      alert('username and password should have more than 3 characters');
+    if (emailInput.length < 3 && passwordInput.length < 3) {
+      alert('email and password should have more than 3 characters');
       return;
       // //If username is less than three (3) characters, throw an error
-    } else if (usernameInput.length < 3) {
-      alert('username should have more than 3 characters');
+    } else if (emailInput.length < 3) {
+      alert('email should have more than 3 characters');
       return;
       //If password is less than three (3) characters, throw an error
     } else if (passwordInput.length < 3) {
@@ -37,16 +37,16 @@ const postLoad = () => {
     }
 
     //if given password or username is correct and at the same time one is wrong
-    if (usernameInput === "admin" && passwordInput === "root") {
+    if (emailInput === "rflprdnt@gmail.com" && passwordInput === "raprap") {
       location.href = "home.html"
-    } else if (usernameInput === "admin" && passwordInput != "root") {
+    } else if (emailInput === "rflprdnt@gmail.com" && passwordInput != "raprap") {
       alert('Wrong Password');
       return;
-    } else if (usernameInput != "admin" && passwordInput === "root") {
-      alert('Wrong Username');
+    } else if (emailInput != "rflprdnt@gmail.com" && passwordInput === "raprap") {
+      alert('Wrong email');
       return;
     } else {
-      alert('Invalid username or password! Please Try Again');
+      alert('Invalid email or password! Please Try Again');
       return;
     }
 
