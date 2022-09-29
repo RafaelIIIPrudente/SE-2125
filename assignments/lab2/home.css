@@ -1,0 +1,31 @@
+.my-home-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  height: 550px;
+}
+
+.header {
+  font-size: xx-large;
+}
+
+#save-button {
+  font-size: large;
+}
+
+#cancel-button {
+  font-size: large;
+}
+
+#firstName {
+  background-color: rgb(237, 236, 236);
+}
+
+#lastName {
+  background-color: rgb(237, 236, 236);
+}
+
+#textFormat {
+  font-size: larger;
+  color: darkblue;
+}
